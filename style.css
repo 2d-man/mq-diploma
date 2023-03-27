@@ -979,7 +979,10 @@
       flex: 0 1 auto;
       height: 247px;
       padding: 0;
+      width: calc((100% - 4px) / 2);
     }
+
+    
 
     .trend-container {
       padding: 35px 30px;
@@ -1179,8 +1182,12 @@
       flex-wrap: wrap;
     }
 
+    .card {
+      display: block;
+    }
+
     .card::after {
-      width: 330px;
+      /* width: 330px; */
     }
 
     .card-image {
@@ -1191,6 +1198,9 @@
       position: relative;
     }
 
+    .card-image-container {
+      width: 300px;
+    }
     .sidebar, .search-group, .subscribe-group {
       /* width: 330px; */
       box-sizing: border-box;
