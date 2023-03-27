@@ -18,6 +18,7 @@
   }
 
   .popup {
+    font-family: "OpenSans Regular";
     position: fixed;
     top: 0;
     right: 0;
@@ -153,10 +154,12 @@
     background-color: #000000;
     /* min-width: 1200px; */
     width: 100%;
+    height: 450px;
+    box-sizing: border-box;
     text-transform: uppercase;
     position: relative;
     padding-bottom: 128px;
-    padding-top: 25px;
+    padding-top: 36px;
     z-index: 1;
   }
   
@@ -174,6 +177,10 @@
   .container {
     margin: 0 auto;
     /* min-width: 1170px; */
+    max-width: 1200px;
+    /* height: 450px; */
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 21px;
     padding-right: 15px;
     z-index: 1;
@@ -191,10 +198,20 @@
   .header-logo {
     width: 179px;
   }
+
+  .header-logo-mob {
+    display: none;
+  }
+  
   
   @media (min-width: 1200px) {
     .menu-burger {
         display: none;
+    }
+
+    .headline {
+      padding-left: 245px;
+      padding-right: 245px;
     }
   }
 
@@ -228,18 +245,21 @@
   
   .headline {
     /* width: 730px; */
+    display: block;
+    box-sizing: border-box;
     margin: 0 auto;
     text-align: center;
     font-family: "OpenSans Bold";
     font-weight: bold;
     font-size: 45px;
     line-height: 75px;
+    
     color: #ffffff;
   }
   
   .container-main {
     /* width: 778px; */
-    padding-bottom: 70px;
+    /* padding-bottom: 70px; */
     /* border: 2px solid red; */
   }
 
@@ -249,7 +269,7 @@
   }
 
   .trends-header {
-    margin: 62px 0 61px 0;
+    margin: 62px 0 44px 0;
   }
 
   .line {
@@ -287,7 +307,7 @@
     box-sizing: border-box;
     flex: 1 1 0;
     position: relative;
-    height: 328px;
+    min-height: 328px;
     display: flex;
     align-items: end;
     /* justify-content: center; */
@@ -334,6 +354,7 @@
 
   .trend-container {
     display: flex;
+    box-sizing: border-box;
     flex-direction: column;
     padding: 37px 34px;
     border: 2px solid #b59f5b;
@@ -352,17 +373,29 @@
   .card {
     display: flex;
   }
+
+  
   
   .card:nth-child(n + 2) {
     margin-top: 54px;
   }
   
+  .card-image-container {
+    width: 379px;
+    box-sizing: border-box;
+    flex: 1 0 auto;
+    margin-right: 30px;
+    /* background: #b59f5b; */
+  }
+
   .card-image {
-    width: 380px;
+    width: 100%;
     margin-right: 30px;
     object-fit: cover;
     position: relative;
+    /* border: 10px solid red; */
   }
+  
   
   .card-description {
     /* width: 380px; */
@@ -423,8 +456,8 @@
     color: #cc9966;
   }
   .card-info {
-    margin-bottom: 55px;
-    margin-top: 26px;
+    padding-bottom: 55px;
+    padding-top: 26px;
   }
   
   .card-date {
@@ -449,7 +482,8 @@
   .content-container {
     box-sizing: border-box;
     display: flex;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
+    justify-content: space-between;
     align-items: flex-start;
     /* justify-content: space-between; */
     max-width: 1200px;
@@ -467,7 +501,7 @@
   }
   
   .sidebar {
-    margin: 0 auto;
+    /* margin-right: 15px; */
     width: 272px;
     /* border: 2px solid red; */
   }
@@ -750,7 +784,7 @@
     box-sizing: border-box;
     flex-direction: column;
     position: relative;
-    height: 260px;
+    min-height: 260px;
     margin: 172px 0 64px 0;
     padding: 54px 20px 0 20px;
     border: 2px solid #b59f5b;
@@ -910,14 +944,77 @@
   }
   
   @media (min-width: 641px) and (max-width: 1199px) {
+
+    .container-menu {
+      margin-bottom: 85px;
+    }
+
+    .header {
+      height: 391px;
+    }
+
+    .headline {
+      padding-top: 0;
+      padding-left: 47px;
+      padding-right: 47px;
+      font-size: 40px;
+      line-height: 55px;
+    }
+
+    .content-container {
+      padding: 50px 35px 0 35px;
+    }
+
+    .trends-header {
+      margin: 41px 0 27px 0;
+      font-size: 18px;
+      line-height: 29px;
+    }
+
     .trends-container {
       flex-wrap: wrap;
-  }
-
-  .trend {
-      flex: 0 1 auto;
-  }
+    }
     
+    .trend {
+      flex: 0 1 auto;
+      height: 247px;
+      padding: 0;
+      width: calc((100% - 4px) / 2);
+    }
+
+    
+
+    .trend-container {
+      padding: 35px 30px;
+      margin: 0 19px 15px 19px;
+    }
+
+    .trend-name-link {
+      font-size: 17px;
+      line-height: 22px;
+    }
+
+    .card-header {
+      padding-top: 12px;
+    }
+
+    .card-info {
+      padding-bottom: 35px;
+    }
+
+    .card-name {
+      font-size: 17px;
+      line-height: 24px;
+    }
+
+    .card-image {
+      width: 390px;
+    }
+
+    .card:nth-child(5):after {
+      content: "";
+      display: none;
+    }
 
     .products-container {
       flex-wrap: wrap;
@@ -926,6 +1023,10 @@
 
     .product {
       width: 48%;
+    }
+
+    .line {
+      margin-top: 50px;
     }
   }
 
@@ -963,7 +1064,10 @@
 }
   
   @media (max-width: 1199px) {
-    
+    .container-menu {
+      align-items: center;
+    }
+
     .menu {
       display: none;
     }
@@ -1026,12 +1130,64 @@
   }
 
   @media (max-width: 640px) {
+    .header {
+      height: 639px;
+    }
+
+    .container-menu {
+      margin: 0;
+      /* justify-content: end; */
+    }
+
+    .logo-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .header-logo-mob {
+      display: block;
+      text-align: center;
+      width: 270px;
+      padding-top: 180px;
+      padding-bottom: 45px;
+    }
+
+    .header-logo {
+      display: none;
+    }
+
+    .headline {
+      width: 300px;
+      font-size: 26px;
+      line-height: 36px;
+    }
+
+    .trends-header {
+      margin: 44px 0 40px 0;
+      font-size: 16px;
+      line-height: 29px;
+    }
+
+    .trend {
+      min-height: 230px;
+      margin-bottom: 3px;
+    }
+
+    .content-container {
+      padding-top: 42px;
+    }
+
     .content-container {
       flex-wrap: wrap;
     }
 
+    .card {
+      display: block;
+    }
+
     .card::after {
-      width: 330px;
+      /* width: 330px; */
     }
 
     .card-image {
@@ -1042,6 +1198,9 @@
       position: relative;
     }
 
+    .card-image-container {
+      width: 300px;
+    }
     .sidebar, .search-group, .subscribe-group {
       /* width: 330px; */
       box-sizing: border-box;
